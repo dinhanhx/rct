@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "rct"
+version = "0.1.0"
+description = "r/cosplay title crawler"
+authors = ["dinhanhx <dinhanhx@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+praw = "^7.7.0"
+mypy = "^1.0.1"
+flake8 = "^6.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
