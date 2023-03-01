@@ -19,3 +19,15 @@ class ImageCaption(JSONWizard):
 
     # Reddit id
     submission_id: str
+
+
+@dataclass
+class ImageCaptionPath(ImageCaption, JSONWizard):
+    class _(JSONWizard.Meta):
+        # Sets the target key transform to use for serialization;
+        # defaults to `camelCase` if not specified.
+        key_transform_with_load = LetterCase.SNAKE
+        key_transform_with_dump = LetterCase.SNAKE
+
+    image_id: str  # 6 digits e.g 000420
+    image_path: str  # image/image_id.jpg e.g image/000420.jpg
