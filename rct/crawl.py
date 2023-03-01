@@ -32,6 +32,8 @@ subreddit_iterator_dict = {
     'hot': reddit_client.subreddit('cosplay').hot,
     'top': reddit_client.subreddit('cosplay').top
 }
+# To get **ALL** submissions, visit this link
+# https://stackoverflow.com/a/54046328/13358358
 
 for key in subreddit_iterator_dict:
     for submission in tqdm(subreddit_iterator_dict[key](limit=None)):
