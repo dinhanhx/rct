@@ -1,5 +1,7 @@
 # r/cosplay title crawler
 
+[Available on Kaggle](https://www.kaggle.com/datasets/inhanhv/rcosplay-hot-top-images-with-titles)
+
 # Setup
 
 ```
