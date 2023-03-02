@@ -20,11 +20,26 @@ Then store them in `confidential/reddit.json` like this (don't actually write "s
 ```
 
 # Run
-- Download all posts in top and hot (but [the number in each category limited by Reddit](https://stackoverflow.com/a/54046328/13358358))
-- Clean text enclosed by square brackets such as `[self]`, `[found]`, ... 
+## Download all posts in top and hot 
+(but [the number in each category limited by Reddit](https://stackoverflow.com/a/54046328/13358358))
+- Output file: `data/cosplay.jsonl`
+- 2161 posts (on 01/03/2023)
 ```
 python rct/crawl.py
+```
+
+## Clean text 
+(in post's title) enclosed by square brackets such as `[self]`, `[found]`, ... 
+- Input file: `data/cosplay.jsonl`
+- Output file: `data/clean_cosplay.jsonl`
+```
 python rct/clean.py
 ```
 
-2161 images with captions on 01/03/2023
+## Download images 
+- Input file: `data/clean_cosplay.jsonl`
+- Output file: `data/map_cosplay.jsonl`, `data/bad_response.jsonl`
+- 2160 downloaded images, 1 bad/delete/deprecated image (on 02/03/2023)
+```
+python rct/download.py
+``` 
