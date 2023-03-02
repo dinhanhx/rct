@@ -45,6 +45,7 @@ python rct/clean.py
 ```
 python rct/download.py
 ``` 
+
 ⚠ The `image_id`, and `image_path` attributes' values are NOT linearly continuous. For example,
 
 in `data/bad_response.jsonl`
@@ -58,3 +59,7 @@ and in `data/map_cosplay.jsonl`
 {"image_id": "001912", "image_path": "data/image/001913.jpg"}
 # omit other json objects
 ```
+
+⚠ `image_path` attribute's values are `data/image/*.jpg`. They are relative to the folder `data` containing all `.jsonl` files and `image` folder. The folder `data` is produced by Python scripts.
+
+⚠ `image_path` attribute's values MISMATCH with *the name of folder containing all `.jsonl` files and `image` folder on __Kaggle__*. When you load the data from Kaggle Dataset, `"data/image/001912.jpg"`'s `data` should be replaced with Kaggle path (see [this notebook](https://www.kaggle.com/code/inhanhv/rct-demo)).
