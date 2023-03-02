@@ -62,4 +62,4 @@ and in `data/map_cosplay.jsonl`
 
 ⚠ `image_path` attribute's values are `data/image/*.jpg`. They are relative to the folder `data` containing all `.jsonl` files and `image` folder. The folder `data` is produced by Python scripts.
 
-⚠ `image_path` attribute's values MISMATCH with *the name of folder containing all `.jsonl` files and `image` folder on __Kaggle__*. When you load the data from Kaggle Dataset, `"data/image/001912.jpg"`'s `data` should be replaced with Kaggle path (see [this notebook](https://www.kaggle.com/code/inhanhv/rct-demo)).
+⚠ `image_path` attribute's values MISMATCH with *the name of folder containing all `.jsonl` files and `image` folder on __Kaggle__*. When you load the data from Kaggle Dataset, `data/image/000000.jpg`'s `data` should be replaced with Kaggle path (see [this notebook](https://www.kaggle.com/code/inhanhv/rct-demo)). It shall become `/kaggle/input/rcosplay-hot-top-images-with-titles/image/000000.jpg`
