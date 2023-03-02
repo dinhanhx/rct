@@ -55,8 +55,8 @@ in `data/bad_response.jsonl`
 and in `data/map_cosplay.jsonl`
 ```python
 # omit other json objects 
-{"image_id": "001912", "image_path": "data/image/001911.jpg"}
-{"image_id": "001912", "image_path": "data/image/001913.jpg"}
+{"image_id": "001911", "image_path": "data/image/001911.jpg"}
+{"image_id": "001913", "image_path": "data/image/001913.jpg"}
 # omit other json objects
 ```
 
