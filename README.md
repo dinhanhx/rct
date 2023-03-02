@@ -2,6 +2,8 @@
 
 [Available on Kaggle](https://www.kaggle.com/datasets/inhanhv/rcosplay-hot-top-images-with-titles)
 
+Please take time to read all this readme before using the dataset. Yes I'm serious!
+
 # Setup
 
 ```
@@ -43,3 +45,16 @@ python rct/clean.py
 ```
 python rct/download.py
 ``` 
+⚠ The `image_id`, and `image_path` attributes' values are NOT linearly continuous. For example,
+
+in `data/bad_response.jsonl`
+```python
+{"image_id": "001912", "image_path": "data/image/001912.jpg"}
+```
+and in `data/map_cosplay.jsonl`
+```python
+# omit other json objects 
+{"image_id": "001912", "image_path": "data/image/001911.jpg"}
+{"image_id": "001912", "image_path": "data/image/001913.jpg"}
+# omit other json objects
+```
